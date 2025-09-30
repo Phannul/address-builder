@@ -6,7 +6,25 @@ public class AddressBuilder {
        String[] billingData = billingPrompt();
        String[] shippingData = shippingPrompt();
 
-       StringBuilder finalOutput = new StringBuilder;
+       StringBuilder finalOutput = new StringBuilder();
+
+       finalOutput.append(("Final Address Confirmation \n"));
+       finalOutput.append("Billing Address \n");
+       finalOutput.append(billingData[0] + "\n");
+       finalOutput.append(billingData[1] + "\n");
+       finalOutput.append(billingData[2] + "\n");
+       finalOutput.append(billingData[3] + "\n");
+       finalOutput.append(billingData[4] + "\n");
+       finalOutput.append("Shipping Address\n");
+       finalOutput.append(shippingData[0]+ "\n");
+       finalOutput.append(shippingData[1]+ "\n");
+       finalOutput.append(shippingData[2] + "\n");
+       finalOutput.append(shippingData[3] + "\n");
+
+       System.out.println(finalOutput.toString());
+
+
+
 
 
     }
