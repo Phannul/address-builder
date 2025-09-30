@@ -8,7 +8,6 @@ public class AddressBuilder {
 
        StringBuilder finalOutput = new StringBuilder();
 
-
        finalOutput.append(("Final Address Confirmation \n"));
        finalOutput.append("Billing Address \n");
        finalOutput.append(billingData[0] + "\n");
