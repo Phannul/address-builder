@@ -3,12 +3,15 @@ import java.util.Scanner;
 public class AddressBuilder {
     static Scanner myScanner = new Scanner(System.in);
     public static void main(String[] args) {
-        billingPrompt(myScanner);
-        shippingPrompt(myScanner);
+       String[] billingData = billingPrompt();
+       String[] shippingData = shippingPrompt();
+
+       StringBuilder finalOutput = new StringBuilder;
+
 
     }
 
-    public static void billingPrompt(Scanner myScanner) {
+    public static String [] billingPrompt() {
         System.out.println("Please provide the following Information: \nFull Name ");
         String fullName = myScanner.nextLine();
 
@@ -23,8 +26,9 @@ public class AddressBuilder {
 
         System.out.println("Billing Zip: ");
         String billingZip = myScanner.nextLine();
+        return new String[] {fullName, billingStreet, billingCity, billingState, billingZip };
     }
-    public static void shippingPrompt(Scanner myScanner) {
+    public static String [] shippingPrompt() {
         System.out.println("Let's start with you shipping address \nShipping Street: ");
         String shippingStreet = myScanner.nextLine();
 
@@ -36,6 +40,8 @@ public class AddressBuilder {
 
         System.out.println("Shipping Zip: ");
         String shippingZip = myScanner.nextLine();
+
+        return new String[] {shippingStreet, shippingCity, shippingState, shippingZip};
 
     }
 }
